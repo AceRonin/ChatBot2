@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f6f8">
+    <title>Product Scout — Find your next headphones</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-mark" href="/" aria-label="Product Scout home">
+        <span class="brand-icon" aria-hidden="true">✳</span>
+        <span>Product Scout</span>
+      </a>
+      <span class="header-note">Thoughtful picks, clearer choices.</span>
+    </header>
+
+    <main class="page-shell">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">YOUR PERSONAL SHOPPING GUIDE</p>
+        <h1 id="page-title">Find the headphones<br>that fit <em>your life.</em></h1>
+        <p class="intro-copy">Compare the details that matter. Ask Product Scout for a recommendation tailored to you.</p>
+      </section>
+
+      <div class="workspace">
+        <section class="catalog-panel" aria-labelledby="catalog-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">CURATED CATALOG</p>
+              <h2 id="catalog-title">Wireless headphones</h2>
+            </div>
+            <span class="catalog-count" id="catalog-count" aria-live="polite">Loading…</span>
+          </div>
+          <div class="product-grid" id="product-list" aria-live="polite" aria-busy="true"></div>
+          <p class="catalog-error" id="catalog-error" role="alert" hidden></p>
+        </section>
+
+        <section class="chat-panel" aria-labelledby="chat-title">
+          <div class="chat-heading">
+            <div class="scout-avatar" aria-hidden="true">✳</div>
+            <div>
+              <p class="eyebrow">YOUR PRODUCT GUIDE</p>
+              <h2 id="chat-title">Ask Product Scout</h2>
+            </div>
+            <span class="online-indicator"><span aria-hidden="true"></span> Ready to help</span>
+          </div>
+          <div class="chat-messages" id="chat-messages" aria-live="polite" aria-relevant="additions text">
+            <article class="message assistant-message">
+              <span class="message-label">PRODUCT SCOUT</span>
+              <p>Hi! Tell me what matters to you—like comfort for long flights, strong noise cancelling, or a budget—and I’ll compare the headphones in our catalog.</p>
+            </article>
+          </div>
+          <p class="chat-error" id="chat-error" role="alert" hidden></p>
+          <form class="chat-form" id="chat-form">
+            <label class="visually-hidden" for="chat-input">Ask about the headphones in the catalog</label>
+            <textarea id="chat-input" name="message" rows="2" maxlength="1500" placeholder="What are you looking for?" required></textarea>
+            <div class="form-footer">
+              <span>Answers are based on the catalog above.</span>
+              <button type="submit" id="send-button">
+                <span>Send</span><span aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+      <footer>Product Scout · Product details are provided for comparison and may change.</footer>
+    </main>
+  </body>
+</html>
